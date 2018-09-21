@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div id="articles">
+                <h1>{{title}}</h1>
+                <br>
+                <ol>
+                    {{#each ArticleInfo}}
+                    <li class="hidden">
+                        <a target="_blank" href="{{this.link}}">
+                            <h3>{{this.title}}</h3>
+                        </a>
+                        <p data-id={{id}}>{{this.summary}}</p>
+                        <a href="/api/{{id}}">
+                            <button class="btn btn-success save" id={{id}}>SAVE</button>
+                        </a>
+                    </li>
+                    <br>
+                    <hr>
+                    {{/each}}
+                </ol>
+
+            </div>
+
+
+        </div>
+
+        <div class="col-6">
+           
+                {{!-- <div id="articles"></div> --}}
+                <div id="notes"></div>
+                
+           
+        </div>
+    </div>
+</div>
+{{!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
