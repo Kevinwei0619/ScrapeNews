@@ -1,0 +1,49 @@
+<div class="container">
+
+    <h1 class="text-center">{{headLine}}</h1>
+    <br>
+
+    {{#each ArticleInfo}}
+    <ol>
+        <div class="card art{{id}}" data-id={{id}}>
+            <div class="card-header">
+                <a target="_blank" href="{{this.link}}">
+                    <h3>{{this.title}}</h3>
+                </a>
+            </div>
+            <div class="card-body">
+                <p class="card-text" data-id={{id}}>
+                    {{this.summary}}
+                </p>
+                <button data-whatever="aaa" type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary articleNote"
+                    data-id={{id}} id={{id}}>Article Note</button>
+                <button class="btn btn-success deteleSaved" data-id={{id}} id={{id}}>Detele From Saved List</button>
+            </div>
+        </div>
+        <br class="card art{{id}}" data-id={{id}}>
+
+    </ol>
+
+      {{/each}}
+
+
+    {{!-- <div id="notes"></div> --}}
+</div>
+
+{{>Modal }}
+
+
+
+
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+
+<!-- Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>

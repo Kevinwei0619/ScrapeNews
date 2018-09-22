@@ -41,6 +41,8 @@ const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/ScrapeNews";
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI) , { useNewUrlParser: true } ;
 
+
+
 // Routes
 require('./routes/apiRoutes')(app);
 require('./routes/htmlRoutes')(app);
