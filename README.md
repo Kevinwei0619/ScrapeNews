@@ -1,5 +1,9 @@
 # ScrapeNews
-The Assignment for MongoDB
+The Assignment for MongoDB.
+
+I deployed it on Heroku. below is a Link for this.
+https://obscure-peak-29252.herokuapp.com/
+
 
 # All the News That's Fit to Scrape
 
